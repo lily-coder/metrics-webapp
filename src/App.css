@@ -1,3 +1,26 @@
 .body {
   color: black;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-ul {
+  display: flex;
+}
+
+.header-text,
+.cities,
+.details {
+  margin: 1rem;
+}
