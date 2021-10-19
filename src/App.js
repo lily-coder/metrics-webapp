@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import CityDetails from './components/CityDetails.js';
-import CityFeed from './components/CityFeed.js';
+import CountryDetails from './components/CountryDetails.js';
+import CountryFeed from './components/CountryFeed.js';
 import Header from './components/Header.js';
 
 const App = () => (
@@ -10,10 +10,10 @@ const App = () => (
       <Header />
       <Switch>
         <Route exact path='/'>
-          <CityFeed />
+          <CountryFeed />
         </Route>
         <Route path='/Details'>
-          <CityDetails />
+          <CountryDetails />
         </Route>
       </Switch>
     </div>
