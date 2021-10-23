@@ -5,7 +5,6 @@
       "pattern": ["**", "!.git/**", "!node_modules/**"]
     }
   },
-  "extends": ["progressive-web-apps"],
   "formatters": ["stylish"],
   "hints": [
     "button-type",
