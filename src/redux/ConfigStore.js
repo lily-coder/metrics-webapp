@@ -5,7 +5,6 @@ import countryReducer from './CountriesReducer.js';
 
 const reducer = combineReducers({
   data: countryReducer,
-  // additional reducers could be added here
 });
 
 const store = createStore(
