@@ -4,7 +4,7 @@
 
 > In this task, we are working with the real live data from API. Our task is to : . The application will allow users to : .
 
-<!-- [screenshot](./metrics.PNG) -->
+[screenshot](./App.PNG)
 
 ## Built With
 

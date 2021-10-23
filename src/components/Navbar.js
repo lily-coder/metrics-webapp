@@ -1,20 +1,25 @@
+/* eslint-disable consistent-return */
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => (
-    <nav className='header-navbar'>
-      <div className="header-text">
-        <h3>COVID-19 TRACKING PROJECT</h3>
+const Navbar = (props) => {
+  const navCheck = () => {
+    if (props.txt !== 'Home') {
+      return (
+        <Link to='/'>
+          {'<'}
+        </Link>
+      );
+    }
+  };
+  return (
+    <div className='nav'>
+      <div>{navCheck()}</div>
+      <div className='nav-header'>
+        <Link to='/'>{'COVID-19 AFRICA STATISTICS'}</Link>
       </div>
-      <ul className="header-nav-ul">
-        <li className="cities">
-          <NavLink to='/' exact>Home</NavLink>
-        </li>
-        <li className="details">
-          <NavLink to='/Details' exact>Details</NavLink>
-        </li>
-      </ul>
-    </nav>
-);
+    </div>
+  );
+};
 
 export default Navbar;
