@@ -1,10 +1,11 @@
 .body {
   color: white;
   margin: auto;
+  background-color: #1c3334f8;
 }
 
-.body {
-  background-color: #1c3334f8;
+.p-d-none {
+  display: none;
 }
 
 li {
@@ -125,7 +126,7 @@ a {
 
 .details-section-li:nth-child(odd) {
   color: white;
-  background-color:#376e6f;
+  background-color: #376e6f;
 }
 
 .details-section-li:nth-child(even) {
