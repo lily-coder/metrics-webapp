@@ -1,20 +1,66 @@
-const GET_COUNTRY = 'GET_COUNTRY';
-const initialState = [];
+export const GET_COUNTRIES = 'countries/countries/GET_COUNTRIES';
+export const GET_COUNTRY_DATA = 'countries/countries/GET_COUNTRY_DATA';
+export const GET_AFRICA = 'countries/countries/GET_AFRICA';
 
-export const getCountries = (payload) => ({
-  type: GET_COUNTRY,
-  payload,
-});
+const initialState = {
+  countries: [],
+  countryData: [],
+  africa: [],
+  continent: [],
+};
 
-const countriesReducer = (state = initialState, action) => {
+export const getCountries = () => async (dispatch) => {
+  const data = await fetch(
+    'https://disease.sh/v3/covid-19/countries',
+    { method: 'GET' },
+  );
+  const bfData = await data.json();
+  const newData = bfData.filter((country) => country.continent === 'Africa');
+  dispatch({ type: GET_COUNTRIES, newData });
+};
+
+export const getAfricaData = () => async (dispatch) => {
+  const data = await fetch(
+    'https://disease.sh/v3/covid-19/continents/africa?strict=true',
+    { method: 'GET' },
+  );
+  const afriData = await data.json();
+  const africa = afriData.cases;
+  dispatch({ type: GET_AFRICA, africa });
+};
+
+export const getCountryData = (country) => async (dispatch) => {
+  const data = await fetch(
+    `https://disease.sh/v3/covid-19/countries/${country}`,
+    { method: 'GET' },
+  );
+  const newData = await data.json();
+  const countryData = {
+    id: newData.countryInfo.iso2,
+    totalcases: newData.cases,
+    recovered: newData.recovered,
+    active: newData.active,
+    critical: newData.critical,
+    tests: newData.tests,
+    deaths: newData.deaths,
+  };
+  dispatch({ type: GET_COUNTRY_DATA, countryData });
+};
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_COUNTRY:
-      return action.payload.map((key) => ({
-        region: key.region,
-      }));
+    case GET_COUNTRIES:
+      return { ...state, countries: action.newData };
+
+    case GET_AFRICA:
+      return { ...state, africa: action.africa };
+
+    case GET_COUNTRY_DATA:
+      return { ...state, countryData: action.countryData };
+
     default:
       return state;
   }
 };
 
-export default countriesReducer;
+export default reducer;

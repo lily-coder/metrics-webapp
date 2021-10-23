@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav snapshot renders correctly 1`] = `
+<div
+  className="nav"
+>
+  <div>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      &lt;
+    </a>
+  </div>
+  <div
+    className="nav-header"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      COVID-19 AFRICA STATISTICS
+    </a>
+  </div>
+</div>
+`;

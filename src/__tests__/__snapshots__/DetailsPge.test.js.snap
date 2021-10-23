@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="body details-page"
+>
+  <div
+    className="nav"
+  >
+    <div>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        &lt;
+      </a>
+    </div>
+    <div
+      className="nav-header"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        COVID-19 AFRICA STATISTICS
+      </a>
+    </div>
+  </div>
+  <header
+    className="details-header"
+  >
+    <div
+      className="details-header-data"
+    >
+      <div
+        className="details-header-data-h"
+      >
+        Kenya
+      </div>
+      <p
+        className="details-header-data-p"
+      />
+    </div>
+  </header>
+  <p
+    className="middle"
+  >
+    STATS BY COUNTRY
+  </p>
+  <ul
+    className="details-section"
+  >
+    <li
+      className="details-section-li"
+    >
+      <span>
+        Recovered
+      </span>
+       
+      <span />
+    </li>
+    <li
+      className="details-section-li"
+    >
+      <span>
+        Active
+      </span>
+       
+      <span />
+    </li>
+    <li
+      className="details-section-li"
+    >
+      <span>
+        Critical
+      </span>
+       
+      <span />
+    </li>
+    <li
+      className="details-section-li"
+    >
+      <span>
+        Tests
+      </span>
+       
+      <span />
+    </li>
+    <li
+      className="details-section-li"
+    >
+      <span>
+        Deaths
+      </span>
+       
+      <span />
+    </li>
+  </ul>
+</div>
+`;

@@ -1,23 +1,26 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import CountryDetails from './components/CountryDetails.js';
-import CountryFeed from './components/CountryFeed.js';
-import Header from './components/Header.js';
+import { Route, Switch } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import BodyList from './pages/CountriesPage.js';
+import ItemDescription from './pages/DetailsPage.js';
 
-const App = () => (
-  <Router>
-    <div className='app'>
-      <Header />
+const App = () => {
+  const countries = useSelector((state) => state.data.countries);
+
+  return (
+    <>
       <Switch>
+        {countries.map((country) => (
+          <Route exact path={`/${country.country}`} key={country}>
+            <ItemDescription country={country.country} />
+          </Route>
+        ))}
         <Route exact path='/'>
-          <CountryFeed />
+          <BodyList />
         </Route>
-        <Route path='/Details'>
-          <CountryDetails />
-        </Route>
+
       </Switch>
-    </div>
-  </Router>
-);
+    </>
+  );
+};
 
 export default App;
