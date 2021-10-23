@@ -6,6 +6,7 @@ import { IconContext } from 'react-icons';
 import { FaGlobeAfrica } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import { getCountries, getAfricaData } from '../redux/CountriesReducer';
+import Filter from '../components/Filter';
 
 const CountryCard = () => {
   const countries = useSelector((state) => state.data.countries);
@@ -40,6 +41,7 @@ const CountryCard = () => {
       </header>
         <div className='total-cases-header middle'>
           <p>STATS BY CONTINENT</p>
+          <Filter />
         </div>
         <div className='country-details'>
           {countries.map((country) => (

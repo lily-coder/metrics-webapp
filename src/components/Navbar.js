@@ -18,7 +18,7 @@ const Navbar = (props) => {
     <div className='nav'>
       <div>{navCheck()}</div>
       <div className='nav-header'>
-        <Link to='/'>{'COVID-19 AFRICA STATISTICS'}</Link>
+        <Link to='/'>{'COVID-19 STATS'}</Link>
       </div>
       <div class='nav-icons'>
         <div className='nav-icon-one'><FiSettings /></div>
