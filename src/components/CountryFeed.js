@@ -1,5 +1,5 @@
 import React from 'react';
-import CountriesList from '../pages/CountriesPage.js';
+import CountriesList from '../pages/CountriesPage';
 
 const CountryFeed = () => (
     <div>

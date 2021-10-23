@@ -22,6 +22,17 @@ a {
   padding: 1rem;
   background-color: #376e6f;
   display: flex;
+  text-align: end;
+}
+
+.nav-icons {
+  display: flex;
+}
+
+.nav-icon-one,
+.nav-icon-two {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .nav-header {

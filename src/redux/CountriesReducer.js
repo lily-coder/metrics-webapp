@@ -7,6 +7,7 @@ const initialState = {
   countryData: [],
   africa: [],
   continent: [],
+  loggedIn: true,
 };
 
 export const getCountries = () => async (dispatch) => {
@@ -57,7 +58,9 @@ const reducer = (state = initialState, action) => {
 
     case GET_COUNTRY_DATA:
       return { ...state, countryData: action.countryData };
+    case 'RESET':
 
+      return initialState;
     default:
       return state;
   }

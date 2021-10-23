@@ -2,7 +2,7 @@
 
 # Metrics Web App
 
-> In this task, we are working with the real live data from API. Our task is to : . The application will allow users to : .
+> In this task, I am working with the real live data from [diseases](https://disease.sh/) API. My task is to display the COVID-19 data in Africa: . The application will allow users to view the COVID-19 cases in countries in Africa
 
 [screenshot](./App.PNG)
 
@@ -51,6 +51,9 @@ Once all the dependencies have been installed and webpack has been built and con
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/lily-coder/metrics-webapp-hub/issues).
+
+## Show your support
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
 ## Show your support
 

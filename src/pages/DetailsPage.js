@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Navbar from '../components/Navbar.js';
-import { getCountryData } from '../redux/CountriesReducer.js';
+import Navbar from '../components/Navbar';
+import { getCountryData } from '../redux/CountriesReducer';
 
 const DescriptionCard = (props) => {
   const { country } = props;

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import Navbar from '../components/Navbar.js';
+import Navbar from '../components/Navbar';
 
 describe('Nav snapshot', () => {
   test('renders correctly', () => {

@@ -1,11 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import countryReducer from './CountriesReducer.js';
+import countryReducer from './CountriesReducer';
 
-const reducer = combineReducers({
+const reducer = (state, action) => combineReducers({
   data: countryReducer,
-});
+})(action.type === 'LOGOUT' ? undefined : state,
+  action);
 
 const store = createStore(
   reducer,

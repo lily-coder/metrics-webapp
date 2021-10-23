@@ -5,8 +5,8 @@ import reducer, {
   GET_COUNTRIES,
   GET_COUNTRY_DATA,
   GET_AFRICA,
-} from '../redux/CountriesReducer.js';
-import data from '../mocks/mocks.js';
+} from '../redux/CountriesReducer';
+import data from '../mocks/mocks';
 
 describe('This is a reducer', () => {
   test('Receive values fom API and update state', () => {

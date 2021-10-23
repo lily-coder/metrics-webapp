@@ -3,10 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { IconContext } from 'react-icons';
-// eslint-disable-next-line import/extensions
 import { FaGlobeAfrica } from 'react-icons/fa';
-import Navbar from '../components/Navbar.js';
-import { getCountries, getAfricaData } from '../redux/CountriesReducer.js';
+import Navbar from '../components/Navbar';
+import { getCountries, getAfricaData } from '../redux/CountriesReducer';
 
 const CountryCard = () => {
   const countries = useSelector((state) => state.data.countries);

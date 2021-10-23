@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import BodyList from './pages/CountriesPage.js';
-import ItemDescription from './pages/DetailsPage.js';
+import BodyList from './pages/CountriesPage';
+import ItemDescription from './pages/DetailsPage';
 
 const App = () => {
   const countries = useSelector((state) => state.data.countries);
