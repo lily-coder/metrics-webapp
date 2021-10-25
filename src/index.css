@@ -1,0 +1,178 @@
+.body {
+  color: white;
+  margin: auto;
+  background-color: #1c3334f8;
+}
+
+.p-d-non {
+  padding: 0%;
+  margin: 0%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  padding: 1rem;
+  background-color: #376e6f;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-icons {
+  display: flex;
+  align-self: flex-end;
+}
+
+.nav-icon-one,
+.nav-icon-two {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.nav-header {
+  margin-left: 1rem;
+}
+
+.page-header {
+  display: flex;
+  text-align: center;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.country-details {
+  width: 100%;
+  margin: auto;
+  background-color: #1c3334;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-data {
+  width: 49%;
+  margin: 1px;
+}
+
+.country-data:nth-child(4n+1),
+.country-data:nth-child(4n+4) {
+  background-color: #376e6f;
+}
+
+.flag-img {
+  width: 100px;
+  height: 50px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.country-cases {
+  margin: 1rem;
+  text-align: end;
+}
+
+.africa-img {
+  width: 100px;
+  height: 100px;
+  color: #376e6f;
+}
+
+.africa-img-desc {
+  margin-left: 2rem;
+  font-size: 1.5em;
+}
+
+.country {
+  text-transform: uppercase;
+}
+
+.details-header {
+  margin: auto;
+}
+
+.details-header-data {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  padding-right: 1rem;
+  text-transform: uppercase;
+}
+
+.details-header-data-h {
+  font-size: 1.5em;
+  padding: 0%;
+  margin: 0%;
+}
+
+.details-header-data-p {
+  font-size: 1.2em;
+  padding: 0%;
+  margin: 0%;
+}
+
+.details-section {
+  color: white;
+  margin: auto;
+  padding: 0%;
+}
+
+.details-page {
+  width: 100%;
+}
+
+.details-section-li {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+}
+
+.details-section-li:nth-child(odd) {
+  color: white;
+  background-color: #376e6f;
+}
+
+.details-section-li:nth-child(even) {
+  color: white;
+  background-color: #1c3334;
+}
+
+.middle {
+  display: flex;
+  background-color: #1c3334;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding-left: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter {
+  width: 100px;
+  background-color: #376e6f;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.buttonn {
+  cursor: pointer;
+  border: none;
+  background-color: #376e6f;
+  color: white;
+  margin: 0.2rem;
+}
+
+.filter-btns {
+  display: flex;
+  flex-direction: column;
+}
