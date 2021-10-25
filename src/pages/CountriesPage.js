@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
@@ -6,12 +6,14 @@ import { IconContext } from 'react-icons';
 import { FaGlobeAfrica } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import { getCountries, getAfricaData } from '../redux/CountriesReducer';
-import Filter from '../components/Filter';
 
 const CountryCard = () => {
   const countries = useSelector((state) => state.data.countries);
   const africa = useSelector((state) => state.data.africa);
-
+  const [fetchedData, setFetchedData] = useState(countries);
+  if (fetchedData.length < 0) {
+    fetchedData.sort((a, b) => b.cases - a.cases);
+  }
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,6 +22,13 @@ const CountryCard = () => {
   useEffect(() => {
     dispatch(getAfricaData());
   }, []);
+
+  const filterdata = () => {
+    fetchedData.sort((a, b) => b.cases - a.cases);
+  };
+  useEffect(() => {
+    setFetchedData(() => countries);
+  }, [countries]);
 
   const toStr = (n) => n.toLocaleString();
 
@@ -41,10 +50,15 @@ const CountryCard = () => {
       </header>
         <div className='total-cases-header middle'>
           <p>STATS BY CONTINENT</p>
-          <Filter />
+          <div className='filter-btns'>
+            <button className='buttonn' onClick = {() => setFetchedData([].concat(fetchedData).sort((a, b) => b.cases - a.cases))}>
+              Highest cases</button>
+            <button className='buttonn' onClick = {() => setFetchedData([].concat(fetchedData).sort((a, b) => a.cases - b.cases))}>
+            Lowest cases</button>
+          </div>
         </div>
         <div className='country-details'>
-          {countries.map((country) => (
+          {countries && fetchedData.map((country) => (
             <div className='country-data' key={uuidv4()}>
             <Link to={`/${country.country}`}>
               <div className='country-flag'>

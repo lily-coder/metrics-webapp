@@ -1,9 +1,9 @@
 import React from 'react';
-import CountriesList from '../pages/CountriesPage';
+import CountryCard from '../pages/CountriesPage';
 
 const CountryFeed = () => (
     <div>
-      <CountriesList />
+      <CountryCard />
     </div>
 );
 
