@@ -22,11 +22,12 @@ a {
   padding: 1rem;
   background-color: #376e6f;
   display: flex;
-  text-align: end;
+  justify-content: space-between;
 }
 
 .nav-icons {
   display: flex;
+  align-self: flex-end;
 }
 
 .nav-icon-one,
@@ -161,4 +162,17 @@ a {
   background-color: #376e6f;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.buttonn {
+  cursor: pointer;
+  border: none;
+  background-color: #376e6f;
+  color: white;
+  margin: 0.2rem;
+}
+
+.filter-btns {
+  display: flex;
+  flex-direction: column;
 }
