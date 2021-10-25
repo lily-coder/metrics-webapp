@@ -4,7 +4,7 @@
 
 > In this task, I am working with the real live data from [diseases](https://disease.sh/) API. My task is to display the COVID-19 data in Africa: . The application will allow users to view the COVID-19 cases in countries in Africa
 
-[screenshot](./App.PNG)
+[screenshot](./metrics.PNG)
 
 ## Built With
 
